@@ -11,6 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 import { ApplyloanComponent } from './applyloan/applyloan.component';
+import { FormsModule } from '@angular/forms';
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,11 +29,15 @@ import { ApplyloanComponent } from './applyloan/applyloan.component';
     LoginComponent,
     RegisterComponent,
     EmicalculatorComponent,
-    ApplyloanComponent
+    ApplyloanComponent,
+    
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
