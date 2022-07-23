@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 import { ApplyloanComponent } from './applyloan/applyloan.component';
+import { FormsModule } from '@angular/forms';
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,6 @@ import { ApplyloanComponent } from './applyloan/applyloan.component';
     RegisterComponent,
     EmicalculatorComponent,
     ApplyloanComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -37,6 +38,8 @@ import { ApplyloanComponent } from './applyloan/applyloan.component';
     MatButtonModule,
     MatInputModule,
     AppRoutingModule,
+    HighchartsChartModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
