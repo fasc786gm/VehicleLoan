@@ -35,6 +35,7 @@
 .part2{
     display: flex;
     flex-direction: column;
+    width: 60vw;
 }
 .part3{
     height: 180vh;
