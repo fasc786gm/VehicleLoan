@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserService } from '../user.service';
 
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
     username: string;
     user: any;
 
-    constructor(private loginService: UserService) { }
+    constructor(private loginService: UserService, public router: Router) { }
 
     ngOnInit(): void {
     }
@@ -29,6 +30,7 @@ export class HeaderComponent implements OnInit {
     logout() {
         sessionStorage.removeItem("user");
         sessionStorage.removeItem("isLoggedIn");
+        this.router.navigate(['/']);
     }
 
 }

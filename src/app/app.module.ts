@@ -21,6 +21,10 @@ import { UserService } from './user.service';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ApprovedloanComponent } from './approvedloan/approvedloan.component';
+import { LoandetailsComponent } from './loandetails/loandetails.component';
+import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
+import { CarmakeComponent } from './carmake/carmake.component';
+import { AddvehicleComponent } from './addvehicle/addvehicle.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { ApprovedloanComponent } from './approvedloan/approvedloan.component';
     UserdashboardComponent,
     AdmindashboardComponent,
     ApprovedloanComponent,
+    LoandetailsComponent,
+    CheckeligibilityComponent,
+    CarmakeComponent,
+    AddvehicleComponent,
   ],
   imports: [
     BrowserModule,
