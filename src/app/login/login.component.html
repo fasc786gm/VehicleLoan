@@ -1,4 +1,4 @@
-<div class="text-center">
+<!-- <div class="text-center">
     <h4 class="text-center"> Login</h4>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
       <div class="example-container">
@@ -29,4 +29,25 @@
         </div>
       </div>
     </form>
+  </div> -->
+<div class="login-div">
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
   </div>
+  <form #loginForm="ngForm" (submit)="loginUser()">
+    <h3>Login Here</h3>
+
+    <label for="username">UserId</label>
+    <input type="text" class="us" name="userId" [(ngModel)]="userId" placeholder="UserId" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" class="us" name="password" placeholder="Password" id="password" [(ngModel)]="password">
+
+    <button type="submit" class="log">Log In</button>
+    <div class="social">
+      <div class="go"><a routerLink="/register">Register</a></div>
+      <div class="fb">forget Password</div>
+    </div>
+  </form>
+</div>

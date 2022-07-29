@@ -1,4 +1,4 @@
-<p>home works!</p>
+<!-- <p>home works!</p>
 <div class="card m-3">
     <h5 class="card-header">Register</h5>
     <div class="card-body">
@@ -75,4 +75,56 @@
             </div>
         </form>
     </div>
+</div> -->
+
+<div class="login-div">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form #regForm="ngForm" (submit)="registerUser()" style="margin-top: 100px;">
+        <h3>Register Here</h3>
+
+        <!-- <label for="firstName">FirstName</label> -->
+        <input type="text" #fname=ngModel class="us" name="firstName" placeholder="FirstName" id="firstName"
+            [(ngModel)]="firstName" required>
+        <div *ngIf="fname.touched && fname.invalid">
+            <div style="color: red;">Please Enter Your FirstName</div>
+        </div>
+
+        <!-- <label for="lastName">LastName</label> -->
+        <input type="text" #lname=ngModel class="us" name="lastName" placeholder="LastName" id="lastName"
+            [(ngModel)]="lastName" required>
+        <div *ngIf="lname.touched && lname.invalid">
+            <div style="color: red;">Please Enter Your LastName</div>
+        </div>
+
+        <!-- <label for="username">UserName</label> -->
+        <input type="email" #email_id="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="us"
+            name="email" placeholder="Email" id="username" [(ngModel)]="email" required>
+        <div *ngIf="email_id.invalid && (email_id.dirty || email_id.touched)">
+            <div *ngIf="email_id.errors?.['required']" style="color: red;">Please Enter Your Email ID</div>
+            <div *ngIf="email_id.errors?.['pattern']" style="color: red;">Wrong Email ID</div>
+        </div>
+
+        <input type="tel" #mob="ngModel" pattern="[0-9]{10}$" class="us" name="mobileNo" placeholder="Mobile Number"
+            id="mobileNo" [(ngModel)]="mobileNo" required>
+        <div *ngIf="mob.invalid && (mob.dirty || mob.touched)">
+            <div *ngIf="mob.errors?.['required']" style="color: red;">Please Enter Your Mobile Number</div>
+            <div *ngIf="mob.errors?.['pattern']" style="color: red;">Wrong Mobile Number</div>
+        </div>
+
+        <!-- <label for="password">Password</label> -->
+        <input type="password" class="us" name="password" placeholder="Password" id="password" [(ngModel)]="password"
+            required>
+
+        <input type="password" class="us" name="confirmPassword" placeholder="Confirm Password" id="confirmpassword"
+            required>
+
+        <button type="submit" class="log">Register</button>
+        <div class="social">
+            <div class="go" style="margin-left: auto; margin-right: auto;"><a routerLink="/login">Login</a></div>
+            <!-- <div class="fb">forget Password</div> -->
+        </div>
+    </form>
 </div>
