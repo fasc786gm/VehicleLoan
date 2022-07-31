@@ -27,6 +27,11 @@
                 <li class="nav-item ml-auto" *ngIf="!isloggedIn()">
                     <a class="nav-link" routerLink="/login">Login</a>
                 </li>
+
+                <li class="nav-item ml-auto" *ngIf="isloggedIn()">
+                    <a *ngIf="checkIsAdmin()" class="nav-link" routerLink="/adminDashboard">Dashboard</a>
+                    <a *ngIf="!checkIsAdmin()" class="nav-link" routerLink="/userDashboard">Dashboard</a>
+                </li>
                 <!-- <li class="nav-item" *ngIf="isloggedIn()">
                     <a class="nav-link" style="cursor: pointer;" (click)="logout()">LogOut</a>
                 </li> -->

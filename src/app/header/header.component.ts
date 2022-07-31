@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
     username: string;
     user: any;
+    checkUser: any;
 
     constructor(private loginService: UserService, public router: Router) { }
 
@@ -31,6 +32,15 @@ export class HeaderComponent implements OnInit {
         sessionStorage.removeItem("user");
         sessionStorage.removeItem("isLoggedIn");
         this.router.navigate(['/']);
+    }
+
+    checkIsAdmin() {
+        this.checkUser = JSON.parse(sessionStorage.getItem("user"));
+        if (this.checkUser.isAdmin == "true") {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

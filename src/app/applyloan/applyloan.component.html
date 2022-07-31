@@ -35,108 +35,30 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="cards-wrapper row">
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/thar.jpg" class="card-img-top" alt="...">
+                        <div class="card col-md-3" *ngFor="let a of fakeArray(); let i = index">
+                            <img src="{{allVehicles[i].carImageUrl}}" class="card-img-top"
+                                alt="{{allVehicles[i].carImageUrl}}">
                             <div class="card-body">
-                                <h5 class="card-title">Mahindra Thar</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/amaze.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Amaze</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/hyundaicreta.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Creta</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/mahindraxuv700.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mahindra XUV 700</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
+                                <h5 class="card-title">{{allVehicles[i].vehicleMake}} {{allVehicles[i].vehicleModel}}
+                                </h5>
+                                <p class="card-text">&#8377; {{allVehicles[i].price}}</p>
+                                <a class="btn btn-primary" (click)="viewDetails(allVehicles[i].vehicleId)">View More</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="cards-wrapper row">
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/thar.jpg" class="card-img-top" alt="...">
+                        <div class="card col-md-3" *ngFor="let a of fakeArray(); let i = index">
+                            <img src="{{allVehicles[4 + i].carImageUrl}}" class="card-img-top"
+                                alt="{{allVehicles[4 + i].carImageUrl}}">
                             <div class="card-body">
-                                <h5 class="card-title">Mahindra Thar</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/amaze.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Amaze</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/hyundaicreta.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Creta</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/mahindraxuv700.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mahindra XUV 700</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="cards-wrapper row">
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/thar.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mahindra Thar</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/amaze.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Amaze</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/hyundaicreta.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Hyundai Creta</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./assets/Images/mahindraxuv700.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mahindra XUV 700</h5>
-                                <p class="card-text">&#8377; 16.45-20 Lakh</p>
-                                <a href="#" class="btn btn-primary">View More</a>
+                                <h5 class="card-title">{{allVehicles[4 + i].vehicleMake}} {{allVehicles[4 +
+                                    i].vehicleModel}}
+                                </h5>
+                                <p class="card-text">&#8377; {{allVehicles[4 + i].price}}</p>
+                                <a class="btn btn-primary" (click)="viewDetails(allVehicles[4 + i].vehicleId)">View
+                                    More</a>
                             </div>
                         </div>
                     </div>
@@ -151,6 +73,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
         <div class="popular-cars-button">
             <button type="submit" class="button btn btn-primary btn-lg">View All Cars</button>
         </div>
@@ -162,7 +85,7 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <div class="card" (click)="searchByMake('Maurti')">
+                <div class="card" (click)="searchByMake('Maruti Suzuki')">
                     <img src="./assets/Images/maruti_logo.webp" class="card-img-top" alt="...">
                 </div>
             </div>
@@ -187,7 +110,7 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <div class="card" (click)="searchByMake('Land-rover')">
+                <div class="card" (click)="searchByMake('Land-Rover')">
                     <img src="./assets/Images/land-rover.webp" class="card-img-top" alt="...">
                 </div>
             </div>
@@ -203,7 +126,7 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <div class="card" (click)="searchByMake('Tata')">
+                <div class="card" (click)="searchByMake('TATA')">
                     <img src="./assets/Images/tata_logo.webp" class="card-img-top" alt="...">
                 </div>
             </div>

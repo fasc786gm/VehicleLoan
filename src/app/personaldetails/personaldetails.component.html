@@ -1,0 +1,41 @@
+<div class="personal-details" style="background-color: #080710;">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form #personalDetailsForm="ngForm" (submit)="addPersonalDetails()">
+        <h3>Fill Your Personal Details</h3>
+        <h2>Let's find about you!</h2>
+
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="personalDetails.firstName" disabled>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="personalDetails.lastName">
+
+        <label for="emailid">Email Id</label>
+        <input type="email" name="email" placeholder="Enter a Valid EmailId" [(ngModel)]="personalDetails.email"
+            disabled>
+
+        <label for="age">Age</label>
+        <input type="text" name="age" placeholder="Enter Your Age in Number" [(ngModel)]="personalDetails.age">
+
+        <label for="mobile">Mobile</label>
+        <input type="tel" name="mobile" placeholder="Enter Your Mobile Number" [(ngModel)]="personalDetails.mobileNo"
+            disabled>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" placeholder="Enter Your Address" [(ngModel)]="personalDetails.address">
+
+        <label for="state">State</label>
+        <input type="text" name="state" placeholder="Enter the State" [(ngModel)]="personalDetails.state">
+
+        <label for="city">City</label>
+        <input type="text" name="city" placeholder="Enter the City" [(ngModel)]="personalDetails.city">
+
+        <label for="pincode">Pincode</label>
+        <input type="text" name="pincode" placeholder="Enter the Pincode" [(ngModel)]="personalDetails.pincode">
+
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>
