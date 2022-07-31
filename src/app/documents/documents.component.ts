@@ -107,6 +107,8 @@ export class DocumentsComponent implements OnInit {
                         this.documents.photoUrl = photo.secure_url;
                         this.vehicleService.uploadImage(slipData).subscribe(slip => {
                             this.documents.sixMonthSalaryUrl = slip.secure_url;
+                            console.log(this.documents);
+
                             this.documentService.addDocuments(this.documents).subscribe(docData => {
                                 this.salesService.addSales(this.sales).subscribe(saleData => {
                                     console.log(saleData);
