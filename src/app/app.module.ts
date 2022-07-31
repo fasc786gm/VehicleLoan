@@ -25,6 +25,12 @@ import { LoandetailsComponent } from './loandetails/loandetails.component';
 import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
 import { CarmakeComponent } from './carmake/carmake.component';
 import { AddvehicleComponent } from './addvehicle/addvehicle.component';
+import { AddloanComponent } from './addloan/addloan.component';
+import { VehiclespecificationComponent } from './vehiclespecification/vehiclespecification.component';
+import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
+import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +50,12 @@ import { AddvehicleComponent } from './addvehicle/addvehicle.component';
     CheckeligibilityComponent,
     CarmakeComponent,
     AddvehicleComponent,
+    AddloanComponent,
+    VehiclespecificationComponent,
+    VehiclemakeComponent,
+    PersonaldetailsComponent,
+    DocumentsComponent,
+    EmploymentdetailsComponent,
   ],
   imports: [
     BrowserModule,

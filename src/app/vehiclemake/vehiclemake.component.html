@@ -1,0 +1,17 @@
+<h1 style="text-align: center; margin-top: 30px; font-size: 4.3em; margin-bottom: 40px;">
+    {{vehicleMake[0].vehicleMake}}
+</h1>
+<div style="margin-left: 350px; width: 100%;">
+
+    <div class="main" style="margin-top: 20px; cursor: pointer;" *ngFor="let v of vehicleMake">
+        <div>
+            <img src="{{v.carImageUrl}}" alt="Tucson" class="img_container">
+        </div>
+        <div class="text_container">
+            <h2>{{v.vehicleMake}} {{v.vehickeModel}}</h2>
+            <h3>₹ {{v.price}} onwards</h3>
+            <br><br>
+            <button type="text" class="submit" (click)="viewDetails(v.vehicleId)">View More Details</button>
+        </div>
+    </div>
+</div>

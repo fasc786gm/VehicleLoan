@@ -48,11 +48,11 @@ export class LoginComponent implements OnInit {
             if (data.ValidUser == "true") {
                 sessionStorage.setItem("user", JSON.stringify(data));
                 sessionStorage.setItem("isLoggedIn", "true");
-                Swal.fire(
-                    'Welcome ' + data.firstName,
-                    'You clicked the button!',
-                    'success'
-                )
+                // Swal.fire(
+                //     'Welcome ' + data.firstName,
+                //     'You clicked the button!',
+                //     'success'
+                // )
                 if (data.isAdmin == "true") {
                     this.router.navigate(['/adminDashboard']);
                 } else {
