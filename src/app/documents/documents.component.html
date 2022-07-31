@@ -6,16 +6,17 @@
     <form #documentsForm="ngForm" (submit)="uploadDocuments()" enctype="multipart/form-data">
         <h2>Identity Details</h2>
         <label for="myfile">Aadhar Card: </label>
-        <input type="file" name="aadharCard" id="aadharCard" (change)="onAadharCardFileChange($event)">
+        <input type="file"  name="aadharCard" id="aadharCard" (change)="onAadharCardFileChange($event)">
+       
         <br><br>
         <label for="myfile">PAN Card: </label>
-        <input type="file" name="panCard" id="panCard" (change)="onPanCardFileChange($event)">
+        <input type="file"  name="panCard" id="panCard" (change)="onPanCardFileChange($event)">
         <br><br>
         <label for="myfile">Photo: </label>
         <input type="file" name="photo" id="photo" (change)="onPhotoChange($event)">
         <br><br>
         <label for="myfile">Six Months Salary Slip: </label>
-        <input type="file" name="salarySlip" id="salarySlip" (change)="onSalarySlipChange($event)">
+        <input type="file"  name="salarySlip" id="salarySlip" (change)="onSalarySlipChange($event)">
         <br><br>
         <button type="submit" class="submit">Submit</button>
     </form>
