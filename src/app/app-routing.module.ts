@@ -12,7 +12,9 @@ import { CarmakeComponent } from './carmake/carmake.component';
 import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
+import { EmischedulerComponent } from './emischeduler/emischeduler.component';
 import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
 import { LoandetailsComponent } from './loandetails/loandetails.component';
 import { LoginComponent } from './login/login.component';
@@ -21,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserallapplicationsComponent } from './userallapplications/userallapplications.component';
 import { UserapprovedapplicationsComponent } from './userapprovedapplications/userapprovedapplications.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { UseridComponent } from './userid/userid.component';
 import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
 import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
 import { VehiclespecificationComponent } from './vehiclespecification/vehiclespecification.component';
@@ -73,6 +76,10 @@ const routes: Routes = [
             {
                 path: 'rejectedApplications',
                 component: UserrejectedapplicationsComponent
+            },
+            {
+                path: 'emiScheduler',
+                component: EmischedulerComponent
             }
         ]
     },
@@ -121,6 +128,14 @@ const routes: Routes = [
     {
         path: "documents",
         component: DocumentsComponent
+    },
+    {
+        path: 'forgotPassword/:userId',
+        component: ForgotpasswordComponent
+    },
+    {
+        path: 'resetPassword',
+        component: UseridComponent
     }
 ];
 

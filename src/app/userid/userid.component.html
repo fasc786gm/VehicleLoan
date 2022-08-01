@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Reset Password</h5>
+        <div class="card-text">
+            <form #userReset="ngForm" (submit)="checkUserId()">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter UserId</label>
+                    <input type="text" name="userId" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter User Id" [(ngModel)]="userId">
+                    <br>
+                    <label for="exampleInputEmail1">Enter EmailId</label>
+                    <input type="email" name="userId" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter User Id" [(ngModel)]="email">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

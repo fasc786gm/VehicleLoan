@@ -1,0 +1,26 @@
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="120px">Vehicle Name</th>
+                <th width="120px">Loan Amount</th>
+
+                <th width="120px">Loan Tenure</th>
+                <th width="120px">Rate of Interest</th>
+                <th width="120px">EMI</th>
+                <th width="120px">EMI Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of details">
+                <td>{{d.vehicleMake}} {{d.vehicleModel}}</td>
+                <td>{{d.loanAmount}}</td>
+
+                <td>{{d.loanTenure}} year</td>
+                <td>{{d.rateOfInterest}} %</td>
+                <td>{{d.emi}}</td>
+                <td>{{emiNextDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

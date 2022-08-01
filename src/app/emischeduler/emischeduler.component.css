@@ -1,0 +1,9 @@
+table {
+    box-shadow: 0 0 40px #0b45e4;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid rgb(12, 29, 185);
+    border-radius: 3px;
+}
