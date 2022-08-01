@@ -65,6 +65,7 @@ export class AdminapplicantsComponent implements OnInit {
     }
 
     approve(salesId) {
+        this.message = "Ok";
         this.salesService.updateOrRejectApplication(salesId, "approved", this.message).subscribe(data => {
             console.log(data);
             location.reload()
