@@ -1,0 +1,83 @@
+<div class="vehicleSpecification">
+    <div>
+        <img class="vehicleSpecificationImg" src="./assets/Images/2.jpg" width="100%" height="1500px" alt="">
+    </div>
+    <form>
+        <div>
+            <label for="model" class="main">Car Model</label>
+            <input disabled type="text" value="{{vehicleData.vehicleModel}}" class="main" style="font-size: 1.2em;"
+                disabled>
+            <img src="{{vehicleData.carImageUrl}}" width="600" style="margin-top:50px; border-radius: 5%;">
+        </div>
+        <div class="price">
+            <h3>Here the best Deal for you!</h3>
+            <table class="table1" style="margin-right: 50px !important;">
+                <th>ROI/Years</th>
+                <th>EMI </th>
+                <th>Total price</th>
+                <th></th><br><br>
+                <tr>
+                    <td width="120">2%/10 yrs</td>
+                    <td width="120">{{emi1}}</td>
+                    <td width="120">{{totalPrice1}}</td>
+                    <td width="120"><button type="button" (click)="applyLoan(1)">Apply</button></td>
+                </tr><br>
+                <tr>
+                    <td width="120">4%/15 yrs</td>
+                    <td width="120">{{emi2}}</td>
+                    <td width="120">{{totalPrice2}}</td>
+                    <td width="120"><button type="button" (click)="applyLoan(2)">Apply</button></td>
+                </tr><br>
+                <tr>
+                    <td width="120">6%/20 yrs</td>
+                    <td width="120">{{emi3}}</td>
+                    <td width="120">{{totalPrice3}}</td>
+                    <td width="120"><button type="button" (click)="applyLoan(3)">Apply</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="spec">
+            <h2>{{vehicleData.vehicleMake}} {{vehicleData.vehicleModel}} Key Specification</h2>
+            <table class="table2">
+
+                <tr>
+                    <td><img src="./assets/Images/fuel.png" width="50" style="opacity: 0.7; border-radius: 50%;"></td>
+                    <td width="30"></td>
+                    <td>Fuel Type</td>
+                    <td width="200"></td>
+                    <td>{{vehicleData.fuelType}}</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/Images/seatingCapacity.png" width="50"
+                            style="opacity: 0.7; border-radius: 50%;"></td>
+                    <td width="30"></td>
+                    <td>Seating Capacity</td>
+                    <td width="200"></td>
+                    <td>{{vehicleData.seatingCapacity}} Seater</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/Images/engine.png" width="50" style="opacity: 0.7; border-radius: 50%;"></td>
+                    <td width="30"></td>
+                    <td>Engine Size</td>
+                    <td width="200"></td>
+                    <td>{{vehicleData.engineSize}}</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/Images/fuelTank.png" width="50" style="opacity: 0.7; border-radius: 50%;">
+                    </td>
+                    <td width="30"></td>
+                    <td>Fuel Tank</td>
+                    <td width="200"></td>
+                    <td>{{vehicleData.fuelTank}} Litre</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/Images/rupee.png" width="50" style="opacity: 0.7; border-radius: 50%;"></td>
+                    <td width="30"></td>
+                    <td>Price</td>
+                    <td width="200">
+                    <td>₹ {{vehicleData.price}}</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>

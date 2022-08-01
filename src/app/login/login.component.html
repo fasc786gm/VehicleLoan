@@ -1,1 +1,53 @@
-<p>login works!</p>
+<!-- <div class="text-center">
+    <h4 class="text-center"> Login</h4>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
+      <div class="example-container">
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mt-top-2">
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password">    
+            <mat-error *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mt-top">
+          <button type ="submit" [disabled]="!loginForm.valid" mat-raised-button color="primary" mat-button>Sign In</button>
+        </div>
+        <div>
+          <a routerLink="/register">Don't have a account ? Create One !</a>
+        </div>
+      </div>
+    </form>
+  </div> -->
+<div class="login-div">
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form #loginForm="ngForm" (submit)="loginUser()">
+    <h3>Login Here</h3>
+
+    <label for="username">UserId</label>
+    <input type="text" class="us" name="userId" [(ngModel)]="userId" placeholder="UserId" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" class="us" name="password" placeholder="Password" id="password" [(ngModel)]="password">
+
+    <button type="submit" class="log">Log In</button>
+    <div class="social">
+      <div class="go"><a routerLink="/register">Register</a></div>
+      <div class="fb">forget Password</div>
+    </div>
+  </form>
+</div>

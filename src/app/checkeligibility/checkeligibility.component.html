@@ -1,0 +1,58 @@
+<div class="eligibility-div">
+    <h3>Are You Eligible?</h3>
+    <form #checkEligibilityForm="ngForm">
+        <h2>Vehicle Details</h2>
+        <label for="Car Make">Car Make</label>
+        <input type="text" name="carmake" class="us" placeholder="Car Make" id="carmake"
+            [(ngModel)]="vehicleData.vehicleMake" disabled>
+
+        <label for="Car Model">Car Model</label>
+        <input type="text" name="carmodel" class="us" placeholder="Car Model" id="carmodel"
+            [(ngModel)]="vehicleData.vehicleModel" disabled>
+
+        <label for="Price">Price</label>
+        <input type="text" name="price" class="us" placeholder="Price" id="price" [(ngModel)]="vehicleData.price"
+            disabled>
+
+        <h2>Applicant Details</h2>
+        <label for="Name">Name</label>
+        <input type="text" name="name" class="us" placeholder="Name" id="name" [(ngModel)]="firstname" disabled>
+
+        <label for="Age">Age</label>
+        <input type="text" name="age" class="us" placeholder="Age" id="age" [(ngModel)]="age">
+        <div>
+            <div style="float: left;">
+                <label for="Gender">Gender</label>
+                <select class="dropdown" name="Gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div style="float: left;">
+                <label for="employement">Type Of Employement</label>
+                <select class="dropdown" name="employement" id="employement" [(ngModel)]="employment">
+                    <option value="Male">Salaried</option>
+                    <option value="Female">Self-Employed</option>
+                </select>
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+        <label for="yearly Salary">Yearly Salary</label>
+        <input type="text" name="salary" class="us" placeholder="Yearly Salary" id="salary" [(ngModel)]="yearlySalary">
+        <br><br>
+        <h2>Contact Details</h2>
+        <label for="Mobile No">Mobile Number</label>
+        <input type="text" class="us" name="mobile" placeholder="Mobile Number" id="mobile" [(ngModel)]="mobile"
+            disabled>
+
+        <label for="Email Id">Email Id</label>
+        <input type="text" class="us" name="email" placeholder="Email Id" id="email" [(ngModel)]="email" disabled><br>
+
+        <button type="button" class="eligible" (click)="checkEligibility()">Check Eligibility </button>
+    </form>
+</div>

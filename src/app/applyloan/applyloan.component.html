@@ -1,1 +1,150 @@
-<p>applyloan works!</p>
+<div class="apply-loan-div">
+    <div class="image-div">
+        <img src="./assets/Images/mountain.jpg" alt="Mountain">
+        <div style="position: absolute; left: 100px;">
+            <div class="image-content">
+                <h5>Find Your Vehicle</h5>
+                <form #searchVehicle="ngForm" (submit)="searchVehicleByType(vehicleType)">
+                    <div class="input-group mb-3">
+                        <select name="type" class="custom-select" id="inputGroupSelect01" [(ngModel)]="vehicleType">
+                            <!-- <option selected value="1-wheeler">1 Wheeler</option> -->
+                            <option selected value="2-wheeler">2 Wheeler</option>
+                            <option value="3-wheeler">3 Wheeler</option>
+                            <option value="4-wheeler">4 Wheeler</option>
+                        </select>
+                        <input class="image-button" type="submit" value="Search Vehicle">
+                    </div>
+                </form>
+            </div>
+            <div class="image-bottom-content">
+                <h5>Explore Our Range</h5>
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input class="image-bottom-button" type="submit" value="Search Vehicle">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="apply-loan-content">
+        <div class="popular-cars">
+            <h3><b>Popular New Cars</b></h3>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper row">
+                        <div class="card col-md-3" *ngFor="let a of fakeArray(); let i = index">
+                            <img src="{{allVehicles[i].carImageUrl}}" class="card-img-top"
+                                alt="{{allVehicles[i].carImageUrl}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{allVehicles[i].vehicleMake}} {{allVehicles[i].vehicleModel}}
+                                </h5>
+                                <p class="card-text">&#8377; {{allVehicles[i].price}}</p>
+                                <a class="btn btn-primary" (click)="viewDetails(allVehicles[i].vehicleId)">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper row">
+                        <div class="card col-md-3" *ngFor="let a of fakeArray(); let i = index">
+                            <img src="{{allVehicles[4 + i].carImageUrl}}" class="card-img-top"
+                                alt="{{allVehicles[4 + i].carImageUrl}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{allVehicles[4 + i].vehicleMake}} {{allVehicles[4 +
+                                    i].vehicleModel}}
+                                </h5>
+                                <p class="card-text">&#8377; {{allVehicles[4 + i].price}}</p>
+                                <a class="btn btn-primary" (click)="viewDetails(allVehicles[4 + i].vehicleId)">View
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="popular-cars-button">
+            <button type="submit" class="button btn btn-primary btn-lg">View All Cars</button>
+        </div>
+    </div>
+
+    <div class="brands">
+        <div class="popular-cars">
+            <h3><b>Search New Cars By Brand</b></h3>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Maruti Suzuki')">
+                    <img src="./assets/Images/maruti_logo.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Mahindra')">
+                    <img src="./assets/Images/mahindra_logo.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Kia')">
+                    <img src="./assets/Images/kia.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Hyundai')">
+                    <img src="./assets/Images/hyundai_logo.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Mercedes-benz')">
+                    <img src="./assets/Images/mercedes-benz.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Land-Rover')">
+                    <img src="./assets/Images/land-rover.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Honda')">
+                    <img src="./assets/Images/honda.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Audi')">
+                    <img src="./assets/Images/audi.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('TATA')">
+                    <img src="./assets/Images/tata_logo.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Volkswagen')">
+                    <img src="./assets/Images/volkswagen.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('BMW')">
+                    <img src="./assets/Images/bmw.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card" (click)="searchByMake('Toyota')">
+                    <img src="./assets/Images/toyota.webp" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

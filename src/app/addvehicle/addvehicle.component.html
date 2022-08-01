@@ -1,0 +1,52 @@
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form #addVehicleForm="ngForm" (ngSubmit)="addVehicle()" enctype="multipart/form-data">
+    <h3>Add On Vehicle</h3>
+    <h2>Fill The Vehicle Details</h2>
+
+    <label for="vehicletype">Vehicle Type </label>
+    <select name="cars" id="cars" (change)="typeChange()" [(ngModel)]="vehicle.vehicleType">
+        <option value="" disabled selected hidden>Choose your Type</option>
+        <option value="2-wheeler">2 Wheeler</option>
+        <option value="3-wheeler">3 Wheeler</option>
+        <option value="4-wheeler">4 Wheeler</option>
+    </select>
+
+    <label for="vehiclemake">Vehicle Make</label>
+    <!-- <input type="text" placeholder="Vehicle Make"> -->
+    <select name="cars" id="cars" [(ngModel)]="vehicle.vehicleMake">
+        <option *ngFor="let v of vehicles" [value]="v">{{v}}</option>
+    </select>
+
+    <label for="vehiclemodel">Vehicle Model</label>
+    <input type="text" name="model" placeholder="Vehicle Model" [(ngModel)]="vehicle.vehicleModel">
+
+    <label for="price">Price Of Vehicle</label>
+    <input type="text" name="price" placeholder="Enter Price in Number" [(ngModel)]="vehicle.price">
+
+    <label for="enginesize">Engine Size</label>
+    <input type="text" name="enginesize" placeholder="Enter Engine Size in Number" [(ngModel)]="vehicle.engineSize">
+
+    <label for="fuelTank">Fuel Tank</label>
+    <input type="text" name="fuelTank" placeholder=" FuelTank Liter Capacity" [(ngModel)]="vehicle.fuelTank">
+
+    <label for="fuelType">Fuel Type</label>
+    <select name="Fueltype" id="fuel" [(ngModel)]="vehicle.fuelType">
+        <option value="petrol">Petrol</option>
+        <option value="diesel">Diesel</option>
+    </select>
+    <label for="seatingcapacity">Seating Capacity</label>
+    <select name="seat" id="seat" [(ngModel)]="vehicle.seatingCapacity">
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+    </select>
+
+    <label for="carImageUrl">Car Image</label>
+    <input type="file" id="myfile" name="carImageUrl" (change)="onFileChange($event)">
+    <!-- <input type="file" id="myfile" ng2FileSelect [uploader]="uploader" /> -->
+
+    <button type="submit" class="submit">Add Vehicle</button>
+</form>

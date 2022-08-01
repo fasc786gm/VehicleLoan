@@ -1,1 +1,113 @@
-<p>emicalculator works!</p>
+<div id="body">
+
+    <div id="content">
+        <div class="part">
+            <div class="part1">
+                <div class="part2">
+                    <h2 id=title1>CAR LOAN EMI CALCULATOR</h2>
+                    <p id="body1">Use LTI-vehicle bank EMI Calculator to how much you need to own a car.
+                        With faster processing,the LTI-vehicle bank supports paperless approval. </p>
+                </div>
+                <img id="car" src="https://www.dialabank.com/wp-content/uploads/2019/11/Car-Loan-Bijoynagar.jpg"
+                    alt="car">
+            </div>
+        </div>
+
+        <div class="part3">
+            <h2 id=title1>EMI CALCULATOR</h2>
+            <p id="body1">Today, buying a dream car is made possible with the help of LTI-Bank.
+                Now,own your favourite car that you have always dreamt with lowest interest rate @7.00% onwards.
+                LTI-Bank provides car loan for a minimum of 12 months to a maximum of 7 years,
+                and higher loan-to-value ratio (100% on-road price funding on certain models) to purchase a new car.
+                The Car Loan is offered even to proprietorship firms, partnership firms, companies, trusts and
+                societies.
+                To make the loan repayment comfortable, you have the EMI (Equated Monthly Instalment) facility.
+                So, before you apply for a Car Loan,
+                as a prudent loan planning exercise, make it point to assess how much would be the EMI on your Car Loan.
+            </p>
+            <h4 id=title1>KEY POINTS</h4>
+            <ul>
+                <li>Loan up to 100% of on road price(On certain car models)</li>
+                <li>Loan tenure up to 7 years</li>
+                <li>Lowest price ever in the market starting from 7.00%</li>
+            </ul>
+
+            <div class="part5" ng-controller="nyctrm" ng-app="myapp">
+                <div class="part4">
+
+                    <div class="part6">
+                        <h4 id=title1>EMI CALCULATOR</h4>
+                    </div>
+                    <div class="center">
+                        <input type="range" min="100000" max="10000000" value="100000" class="slider" id="myRange"
+                            [(ngModel)]="loan" />
+                        <p>LOAN VALUE(₹):- </p><input type="number" class="form-control" min="100000" max="10000000"
+                            [(ngModel)]="loan" value="{{loan}}" />
+                    </div>
+                    <div class="center">
+                        <input type="range" min="1" max="7" value="1" class="slider" id="myRange" [(ngModel)]="years" />
+                        <p>TENURE(YEARS):-</p><input type="number" class="form-control" min="1" max="7"
+                            [(ngModel)]="years" />
+                    </div>
+                    <div class="center">
+                        <input type="range" min="7" max="17.5" class="form-control" value="7" step="0.1" class="slider"
+                            id="myRange" [(ngModel)]="interest">
+                        <p>INTEREST PERCENTAGE(%):- </p><input type="number" class="form-control" step="0.1" min="7"
+                            [(ngModel)]="interest" />
+                    </div>
+
+                </div>
+                <div class="part7">
+                    <div class="part6">
+                        <h4 id=title1>Break-up of Total Payment</h4>
+                    </div>
+                    <div class="emidetails">
+                        <h5>Equated Monthly Installments</h5>
+                        <h5> (EMI) For <b>{{this.years*12}}</b> Months</h5>
+                        <b id="emi">₹{{fun()}}</b>
+                    </div>
+                    <div class="details">
+                        <!-- <div class="row"> 
+                            <h6>Principal amount:</h6>
+                            <b class="space">₹{{loan}}</b>
+                        </div>
+                        <div class="row">
+                            <h6>Interest amount:</h6>
+                            <b class="space">₹{{ins()}}</b>
+                        </div> -->
+                        <div class="givenData">
+                            <div class="labels">
+                                <h5>Principal amount:</h5>
+                                <h5>Interest amount:</h5>
+                            </div>
+                            <div class="labels">
+                                <b>₹{{loan}}</b>
+                                <b>₹{{ins()}}</b>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <!-- <div class="row">
+                            <h6>Total amount:</h6>
+                            <b class="space">₹{{total()}}</b>
+                        </div> -->
+                        <div class="givenData">
+                            <div class="labels">
+                                <h5>Total amount:</h5>
+                            </div>
+                            <div class="labels">
+                                <b class="space">₹{{total()}}</b>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <highcharts-chart [Highcharts]="highcharts" [options]="chartOptions"
+                style="width: 100%; height: 100%; display: flex;">
+            </highcharts-chart>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="personal-details" style="background-color: #080710;">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form #personalDetailsForm="ngForm" (submit)="addPersonalDetails()">
+        <h3>Fill Your Personal Details</h3>
+        <h2>Let's find about you!</h2>
+
+        <label for="firstname">First Name</label>
+        <input type="text" #fname=ngModel name="firstName" placeholder="First Name"
+            [(ngModel)]="personalDetails.firstName" disabled>
+
+        <div *ngIf="fname.touched && fname.invalid">
+            <div style="color: red;">Please Enter Your FirstName</div>
+        </div>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" #lname=ngModel name="lastName" placeholder="Last Name" [(ngModel)]="personalDetails.lastName"
+            required>
+        <div *ngIf="lname.touched && lname.invalid">
+            <div style="color: red;">Please Enter Your LastName</div>
+        </div>
+
+        <label for="emailid">Email Id</label>
+        <input type="email" #email_id="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email"
+            placeholder="Enter a Valid EmailId" [(ngModel)]="personalDetails.email" disabled>
+        <div *ngIf="email_id.invalid && (email_id.dirty || email_id.touched)">
+            <div *ngIf="email_id.errors?.['required']" style="color: red;">Please Enter Your Email ID</div>
+            <div *ngIf="email_id.errors?.['pattern']" style="color: red;">Wrong Email ID</div>
+        </div>
+
+        <label for="age">Age</label>
+        <input type="text" #age="ngModel" pattern="[0-9]{2}$" name="age" placeholder="Enter Your Age in Number"
+            [(ngModel)]="personalDetails.age" required>
+
+        <div *ngIf="age.invalid && (age.dirty || age.touched)">
+            <div *ngIf="age.errors?.['required']" style="color: red;">Please Enter Your Age</div>
+            <div *ngIf="age.errors?.['pattern']" style="color: red;">Wrong Age</div>
+        </div>
+
+        <label for="mobile">Mobile</label>
+        <input type="tel" #mob="ngModel" pattern="[0-9]{10}$" name="mobile" placeholder="Enter Your Mobile Number"
+            [(ngModel)]="personalDetails.mobileNo" disabled>
+
+        <div *ngIf="mob.invalid && (mob.dirty || mob.touched)">
+            <div *ngIf="mob.errors?.['required']" style="color: red;">Please Enter Your Mobile Number</div>
+            <div *ngIf="mob.errors?.['pattern']" style="color: red;">Wrong Mobile Number</div>
+        </div>
+
+        <label for="address">Address</label>
+        <input type="text" #addr=ngModel name="address" placeholder="Enter Your Address"
+            [(ngModel)]="personalDetails.address" required>
+        <div *ngIf="addr.touched && addr.invalid">
+            <div style="color: red;">Please Enter Your Address</div>
+        </div>
+
+        <label for="state">State</label>
+        <input type="text" #state=ngModel name="state" placeholder="Enter the State" [(ngModel)]="personalDetails.state"
+            required>
+
+        <div *ngIf="state.touched && state.invalid">
+            <div style="color: red;">Please Enter Your State</div>
+        </div>
+        <label for="city">City</label>
+        <input type="text" #city=ngModel name="city" placeholder="Enter the City" [(ngModel)]="personalDetails.city"
+            required>
+        <div *ngIf="city.touched && city.invalid">
+            <div style="color: red;">Please Enter Your city</div>
+        </div>
+        <label for="pincode">Pincode</label>
+        <input type="text" #pin="ngModel" pattern="[0-9]{6}$" name="pincode" placeholder="Enter the Pincode"
+            [(ngModel)]="personalDetails.pincode" required>
+        <div *ngIf="pin.invalid && (pin.dirty || pin.touched)">
+            <div *ngIf="pin.errors?.['required']" style="color: red;">Please Enter Your Pincode</div>
+            <div *ngIf="pin.errors?.['pattern']" style="color: red;">Wrong Pincode</div>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>

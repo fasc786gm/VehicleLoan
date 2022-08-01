@@ -1,0 +1,26 @@
+<div class="user-dashboard">
+    <div class="left-sidebar">
+        <ul>
+            <li>
+                <a routerLink="/userDashboard/"><i class="fa fa-solid fa-house-user"></i>Loan Details</a>
+            </li>
+            <li>
+                <a routerLink="/userDashboard/approvedApplications"><i class="fa-solid fa-certificate"></i>Approved
+                    Loan</a>
+            </li>
+            <li>
+                <a routerLink="/userDashboard/rejectedApplications"><i class="fa-solid fa-square-xmark"></i>Rejected
+                    Loan</a>
+            </li>
+            <li>
+                <a routerLink="/userDashboard/"><i class="fa-solid fa-credit-card"></i>EMI Scheduler</a>
+            </li>
+            <li>
+                <a routerLink="/userDashboard/"><i class="fa-solid fa-address-card"></i>Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="right-sidebar">
+        <router-outlet></router-outlet>
+    </div>
+</div>

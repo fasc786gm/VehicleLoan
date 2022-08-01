@@ -1,0 +1,468 @@
+/* 
+#body {
+    padding-top: 7vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content {
+    width: 80vw;
+    margin: 30px 0 30px 0;
+}
+
+.part{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.part1{    
+    height: 40vh;
+    width: 80vw;  
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;     
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+.part3{
+    height: 180vh;
+    width: 80vw;  
+    display: flex;
+    flex-direction: column;   
+}
+.part4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+    width: 40%;
+    align-items: center;
+    padding-bottom: 20px;
+    border: 2px black solid;
+    box-shadow: 10px 10px 5px #ccc;
+    
+    
+}
+.part5{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+.part6{
+    min-height:14%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: rgb(173, 206, 220);
+
+   
+}
+.part7{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 40%;
+    align-items: center;
+    border: 2px black solid;
+    box-shadow: 10px 10px 5px #ccc;
+}
+
+.emidetails{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+}
+.graph{
+    height: 100%;
+    width: 60%;
+}
+
+#emi {
+    font-size: 30px;
+    color: rgb(2, 92, 130);;
+}
+
+#car{
+    height: 38vh;
+    width: 50vw;
+    bottom: 15%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #ccc;   
+}
+#title1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding-left: 2vw;
+    padding-top: 2vh;
+}
+
+#body1{
+    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 5vh;
+    text-align: justify;
+}
+
+.slider{
+    width: 27vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 18%;
+}
+
+hr{
+    width: 70%;
+    border-top: 3px dotted rgb(2, 92, 130);
+    padding: 0;
+    margin: 0;
+}
+
+
+.givenData {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 18%;
+    align-items: center;
+    height: 50%;
+    font-size: large;
+}
+
+.labels {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    font-size: large;
+}
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        padding-bottom: 15px;
+      }
+      
+      .slider:hover {
+        opacity: 1;
+      }
+      
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 23px;
+        height: 24px;
+        border: 0;
+        background: url('src\assets\Images\car.png');
+        cursor: pointer;
+      }
+      
+      .slider::-moz-range-thumb {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        background: url('src\assets\Images\car.png');
+        cursor: pointer;
+      } */
+
+#body {
+    /* border: 3px solid brown; */
+    padding-top: 7vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content {
+    width: 80vw;
+    /* border: 3px solid brown; */
+    margin: 30px 0 30px 0;
+}
+
+.part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid brown; */
+
+}
+
+.part1 {
+    height: 40vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat; 
+    
+    /* border:solid 5px rgb(3, 3, 246); */
+    
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+.part3{
+    height: 180vh;
+    width: 80vw;  
+    display: flex;
+    flex-direction: column;
+    /* border:solid 5px rgb(3, 3, 246); */
+   
+    
+}
+.part4{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+    width: 40%;
+    align-items: center;
+    padding-bottom: 20px;
+    border: 2px black solid;
+    box-shadow: 10px 10px 5px #ccc;
+
+
+}
+
+.part5 {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid green; */
+
+}
+
+.part6 {
+    min-height: 14%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: rgb(173, 206, 220);
+
+
+}
+
+.part7 {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 40%;
+    align-items: center;
+    border: 2px black solid;
+    box-shadow: 10px 10px 5px #ccc;
+}
+
+.emidetails {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* border: 2px red solid;   */
+}
+
+.graph {
+    height: 100%;
+    width: 60%;
+    /* border: 2px purple solid; */
+}
+
+#emi {
+    font-size: 30px;
+    color: rgb(2, 92, 130);
+    ;
+}
+
+#car {
+
+    height: 38vh;
+    width: 50vw;
+    bottom: 15%;
+    /* padding-right: 10vw; */
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #ccc;
+    /* border:solid 5px rgb(3, 3, 246); */
+
+
+}
+
+#title1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding-left: 2vw;
+    padding-top: 2vh;
+
+}
+
+#body1 {
+    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 5vh;
+    text-align: justify;
+
+}
+
+.slider {
+    width: 27vw;
+
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    width: 100%;
+    padding-left: 18%;
+}
+
+hr {
+    width: 70%;
+    border-top: 3px dotted rgb(2, 92, 130);
+    padding: 0;
+    margin: 0;
+}
+
+
+.givenData {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 18%;
+    /* border: 1px solid yellow; */
+    align-items: center;
+    height: 50%;
+    font-size: large;
+}
+
+.labels {
+    width: 50%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid green; */
+    height: 70%;
+    font-size: large;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding-bottom: 15px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 34px;
+    height: 24px;
+    border: 0;
+    background: url('src\assets\Images\car.png');
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: url('src\assets\images\car.png');
+    cursor: pointer;
+}
+
+.dataInput {
+    width: 60%;
+}
