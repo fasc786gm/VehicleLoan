@@ -14,6 +14,6 @@ export class DocumentsService {
     addDocuments(documents: Documents): Observable<any> {
         const headers = { 'content-type': 'application/json' };
         let body = JSON.stringify(documents);
-        return this.httpClient.post<any>(baseUrl + "/addDocuments", body, { 'headers': headers });
+        return this.httpClient.post<any>(baseUrl + "/documents/addDocument", body, { 'headers': headers });
     }
 }

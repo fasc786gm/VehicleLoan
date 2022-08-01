@@ -3,5 +3,5 @@ export class Sales {
     vehicleId: number;
     loanId: number;
     applicantId: number;
-    isLoanApproved: boolean;
+    isLoanApproved: string;
 }

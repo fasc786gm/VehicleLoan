@@ -1,0 +1,189 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">View Personal Details</th>
+            <th scope="col">View Loan Details</th>
+            <th scope="col">View Vehicle Details</th>
+            <th scope="col">View Document Details</th>
+            <th scope="col">status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allApplicants">
+            <th scope="row">{{p.firstName}}</th>
+            <td><button type="button" (click)="viewPersonalDetails(p.firstName, p.age, p.email, p.mobileNo)"
+                    class="btn btn-primary" data-toggle="modal" data-target="#personalDetails">View
+                    Details</button></td>
+            <td><button type="button" (click)="viewLoanDetails(p.loanTenure, p.loanAmount, p.rateOfInterest, p.emi)"
+                    class="btn btn-primary" data-toggle="modal" data-target="#loanDetails">View
+                    Details</button></td>
+            <td><button type="button" (click)="viewVehicleDetails(p.vehicleMake, p.vehicleModel, p.price)"
+                    class="btn btn-primary" data-toggle="modal" data-target="#vehicleDetails">View
+                    Details</button></td>
+            <td><button type="button"
+                    (click)="viewDocumentDetails(p.aadharUrl, p.panUrl, p.photoUrl, p.sixMonthSalarySlipUrl)"
+                    class="btn btn-primary" data-toggle="modal" data-target="#documentDetails">View
+                    Details</button></td>
+            <td><span class="badge badge-success">Approved</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal" id="personalDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Personal Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Age</th>
+                            <th>Email Id</th>
+                            <th>Mobile No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{firstName}}</td>
+                            <td>{{age}}</td>
+                            <td>{{email}}</td>
+                            <td>{{mobileNo}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="loanDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Loan Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Loan Amount</th>
+                            <th>Loan Tenure</th>
+                            <th>EMI</th>
+                            <th>Rate of Interest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{loanAmount}}</td>
+                            <td>{{loanTenure}}</td>
+                            <td>{{emi}}</td>
+                            <td>{{rateOfInterest}} %</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="vehicleDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Vehicle Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Vehicle Make</th>
+                            <th>Vehicle Model</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{vehicleMake}}</td>
+                            <td>{{vehicleModel}}</td>
+                            <td>{{price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="documentDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Document Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>View Document</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aadhar Card</td>
+                            <td><a class="btn btn-primary" href="{{aadharUrl}}" target="_blank">
+                                    View
+                                    Document </a></td>
+                        </tr>
+                        <tr>
+                            <td>Pan Card</td>
+                            <td><a class="btn btn-primary" href="{{panUrl}}" target="_blank">
+                                    View
+                                    Document </a></td>
+                        </tr>
+                        <tr>
+                            <td>Photo</td>
+                            <td><a class="btn btn-primary" href="{{photoUrl}}" target="_blank"> View
+                                    Document </a></td>
+                        </tr>
+                        <tr>
+                            <td>Six Month Salary Slip</td>
+                            <td><a class="btn btn-primary" href="{{photoUrl}}" target="_blank">
+                                    View
+                                    Document </a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

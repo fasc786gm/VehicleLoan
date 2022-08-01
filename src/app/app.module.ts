@@ -31,6 +31,11 @@ import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
 import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
+import { AdminapplicantsComponent } from './adminapplicants/adminapplicants.component';
+import { AdminrejectedapplicantsComponent } from './adminrejectedapplicants/adminrejectedapplicants.component';
+import { UserallapplicationsComponent } from './userallapplications/userallapplications.component';
+import { UserapprovedapplicationsComponent } from './userapprovedapplications/userapprovedapplications.component';
+import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +61,11 @@ import { EmploymentdetailsComponent } from './employmentdetails/employmentdetail
     PersonaldetailsComponent,
     DocumentsComponent,
     EmploymentdetailsComponent,
+    AdminapplicantsComponent,
+    AdminrejectedapplicantsComponent,
+    UserallapplicationsComponent,
+    UserapprovedapplicationsComponent,
+    UserrejectedapplicationsComponent,
   ],
   imports: [
     BrowserModule,
