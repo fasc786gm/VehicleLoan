@@ -36,6 +36,9 @@ import { AdminrejectedapplicantsComponent } from './adminrejectedapplicants/admi
 import { UserallapplicationsComponent } from './userallapplications/userallapplications.component';
 import { UserapprovedapplicationsComponent } from './userapprovedapplications/userapprovedapplications.component';
 import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
+import { EmischedulerComponent } from './emischeduler/emischeduler.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { UseridComponent } from './userid/userid.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +69,9 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
     UserallapplicationsComponent,
     UserapprovedapplicationsComponent,
     UserrejectedapplicationsComponent,
+    EmischedulerComponent,
+    ForgotpasswordComponent,
+    UseridComponent,
   ],
   imports: [
     BrowserModule,

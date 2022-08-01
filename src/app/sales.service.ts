@@ -43,4 +43,8 @@ export class SalesService {
         return this.httpClient.get<any>(baseUrl + "/sales/userRejectedApplications/" + userId);
     }
 
+    getEmi(userId: number): Observable<any> {
+        return this.httpClient.get<any>(baseUrl + "/sales/emiScheduler/" + userId);
+    }
+
 }

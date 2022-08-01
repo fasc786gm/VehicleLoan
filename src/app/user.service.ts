@@ -32,4 +32,12 @@ export class UserService {
     getUsername() {
         return this.userName;
     }
+
+    checkUserId(userId: number, email: string): Observable<any> {
+        return this.httpClient.get<any>(baseUrl + "/users/checkUserId/" + userId + "/" + email);
+    }
+
+    resetPassword(userId: number, password: string): Observable<any> {
+        return this.httpClient.get<any>(baseUrl + "/users/forgotPassword/" + userId + "/" + password);
+    }
 }
