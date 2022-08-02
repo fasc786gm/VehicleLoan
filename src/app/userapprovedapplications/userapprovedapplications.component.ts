@@ -48,7 +48,7 @@ export class UserapprovedapplicationsComponent implements OnInit {
         this.mobileNo = mobileNo;
     }
 
-    viewLoanDetails(loanAmount, loanTenure, rateOfInterest, emi) {
+    viewLoanDetails(loanTenure,loanAmount,rateOfInterest, emi) {
         this.loanAmount = loanAmount;
         this.loanTenure = loanTenure;
         this.rateOfInterest = rateOfInterest;

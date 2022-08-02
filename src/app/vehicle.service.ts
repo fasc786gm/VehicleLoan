@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { arrayMax } from 'highcharts';
 import { Observable } from 'rxjs';
 import baseUrl from './baseUrl';
 import { Vehicle } from './vehicle';
@@ -11,6 +12,7 @@ export class VehicleService {
 
     vehicleData: any;
     vehicleMakeList: any = new Array();
+    VehicleModelList:any=new Array();
 
     constructor(private httpClient: HttpClient) { }
 
@@ -37,6 +39,10 @@ export class VehicleService {
         return this.httpClient.get<any>(baseUrl + "/vehicles/vehicleMake/" + vehicleMake);
     }
 
+    getVehicleByModel(vehicleModel: string): Observable<any> {
+        return this.httpClient.get<any>(baseUrl+ "/vehicles/vehicleModel/"+vehicleModel);
+    }
+
     setVehicleData(data): void {
         this.vehicleData = data;
     }
@@ -52,4 +58,15 @@ export class VehicleService {
     getVehicleMake() {
         return this.vehicleMakeList
     }
+    getVehicleModelList():any{
+        return this.VehicleModelList;
+    }
+    setVehicleModelList(vehicleModel):any{
+        this.VehicleModelList=vehicleModel;
+    }
+
 }
+function http<T>(http: any): Observable<any> {
+    throw new Error('Function not implemented.');
+}
+

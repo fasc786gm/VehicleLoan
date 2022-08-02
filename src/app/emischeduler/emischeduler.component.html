@@ -1,4 +1,5 @@
-<div>
+<div><button printSectionId="section" ngxPrint>Print</button></div>
+<div id="section"> 
     <table class="table table-striped">
         <thead>
             <tr>
@@ -9,6 +10,7 @@
                 <th width="120px">Rate of Interest</th>
                 <th width="120px">EMI</th>
                 <th width="120px">EMI Date</th>
+                <!-- <th width="120px">Pay EMI</th> -->
             </tr>
         </thead>
         <tbody>
@@ -20,7 +22,10 @@
                 <td>{{d.rateOfInterest}} %</td>
                 <td>{{d.emi}}</td>
                 <td>{{emiNextDate}}</td>
+                <!-- <td><button type="button" (click)="payEmi()"
+                    class="btn btn-primary" data-toggle="modal">Pay</button></td> -->
             </tr>
         </tbody>
     </table>
+    
 </div>

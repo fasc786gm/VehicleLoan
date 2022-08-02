@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxPrintModule } from 'ngx-print';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +39,8 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
 import { EmischedulerComponent } from './emischeduler/emischeduler.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { UseridComponent } from './userid/userid.component';
+import { EnquirycomponentComponent } from './enquirycomponent/enquirycomponent.component';
+import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,8 @@ import { UseridComponent } from './userid/userid.component';
     EmischedulerComponent,
     ForgotpasswordComponent,
     UseridComponent,
+    EnquirycomponentComponent,
+    VehilclemodelComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +86,8 @@ import { UseridComponent } from './userid/userid.component';
     MatInputModule,
     AppRoutingModule,
     HighchartsChartModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPrintModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ export class ApplyloanComponent implements OnInit {
 
     isLoggedIn: string;
     vehicleType: string = "4-wheeler";
+    vehicleModel:string;
 
     allVehicles: any = [];
 
@@ -52,6 +53,14 @@ export class ApplyloanComponent implements OnInit {
             this.router.navigateByUrl("/vehicleSpecification");
         });
     }
+    
+    searchVehicleByModel(vehicleModel:string){
+        this.vehicleService.getVehicleByModel(vehicleModel).subscribe(data => {
+            this.vehicleService.setVehicleModelList(data);
+            this.router.navigateByUrl("/vehicleModel");
+        });
+    }
+
 
     fakeArray() {
         return new Array(4);
