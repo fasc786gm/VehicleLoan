@@ -29,6 +29,7 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
 import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
 import { VehiclespecificationComponent } from './vehiclespecification/vehiclespecification.component';
 import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 const routes: Routes = [
     {
@@ -106,8 +107,14 @@ const routes: Routes = [
                 component: AdminrejectedapplicantsComponent
             },
             {
+
                 path:'enquirycomponent',
                 component:EnquirycomponentComponent
+            },
+            {
+                path: 'viewAllUsers',
+                component: ViewusersComponent
+
             }
         ]
     },

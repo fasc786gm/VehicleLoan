@@ -26,4 +26,8 @@ export class PersonaldetailsService {
     getPersonalDetails() {
         return this.personalDetails;
     }
+
+    getPersonalDetailsByUserId(userId: number): Observable<any> {
+        return this.httpClient.get<any>(baseUrl + "/personalDetails/checkPersonalDetails/" + userId);
+    }
 }

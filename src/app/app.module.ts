@@ -41,6 +41,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { UseridComponent } from './userid/userid.component';
 import { EnquirycomponentComponent } from './enquirycomponent/enquirycomponent.component';
 import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component'
     UseridComponent,
     EnquirycomponentComponent,
     VehilclemodelComponent,
+    ViewusersComponent,
   ],
   imports: [
     BrowserModule,
