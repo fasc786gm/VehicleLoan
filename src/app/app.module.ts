@@ -39,6 +39,7 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
 import { EmischedulerComponent } from './emischeduler/emischeduler.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { UseridComponent } from './userid/userid.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { UseridComponent } from './userid/userid.component';
     EmischedulerComponent,
     ForgotpasswordComponent,
     UseridComponent,
+    ViewusersComponent,
   ],
   imports: [
     BrowserModule,

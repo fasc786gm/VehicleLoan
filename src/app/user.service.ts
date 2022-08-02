@@ -40,4 +40,8 @@ export class UserService {
     resetPassword(userId: number, password: string): Observable<any> {
         return this.httpClient.get<any>(baseUrl + "/users/forgotPassword/" + userId + "/" + password);
     }
+
+    viewAllUsers(): Observable<any> {
+        return this.httpClient.get<any>(baseUrl + "/users/viewAllUsers");
+    }
 }
