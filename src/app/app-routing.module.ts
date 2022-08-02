@@ -14,6 +14,7 @@ import { DocumentsComponent } from './documents/documents.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 import { EmischedulerComponent } from './emischeduler/emischeduler.component';
 import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
+import { EnquirycomponentComponent } from './enquirycomponent/enquirycomponent.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
 import { LoandetailsComponent } from './loandetails/loandetails.component';
@@ -27,6 +28,7 @@ import { UseridComponent } from './userid/userid.component';
 import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
 import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
 import { VehiclespecificationComponent } from './vehiclespecification/vehiclespecification.component';
+import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
 import { ViewusersComponent } from './viewusers/viewusers.component';
 
 const routes: Routes = [
@@ -105,8 +107,14 @@ const routes: Routes = [
                 component: AdminrejectedapplicantsComponent
             },
             {
+
+                path:'enquirycomponent',
+                component:EnquirycomponentComponent
+            },
+            {
                 path: 'viewAllUsers',
                 component: ViewusersComponent
+
             }
         ]
     },
@@ -121,6 +129,10 @@ const routes: Routes = [
     {
         path: 'vehicleMake',
         component: VehiclemakeComponent
+    },
+    {
+        path:'vehicleModel',
+        component:VehilclemodelComponent
     },
     {
         path: 'personalDetails',
