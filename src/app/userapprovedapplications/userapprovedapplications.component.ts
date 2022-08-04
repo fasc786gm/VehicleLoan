@@ -36,7 +36,6 @@ export class UserapprovedapplicationsComponent implements OnInit {
         this.userId = +this.user.userId;
         this.salesService.getUserApprovedApplications(this.userId).subscribe(applicants => {
             console.log(applicants);
-
             this.allApplicants = applicants;
         })
     }
@@ -48,7 +47,7 @@ export class UserapprovedapplicationsComponent implements OnInit {
         this.mobileNo = mobileNo;
     }
 
-    viewLoanDetails(loanTenure,loanAmount,rateOfInterest, emi) {
+    viewLoanDetails(loanTenure, loanAmount, rateOfInterest, emi) {
         this.loanAmount = loanAmount;
         this.loanTenure = loanTenure;
         this.rateOfInterest = rateOfInterest;

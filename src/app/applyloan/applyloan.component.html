@@ -6,12 +6,13 @@
                 <h5>Find Your Vehicle</h5>
                 <form #searchVehicle="ngForm" (submit)="searchVehicleByModel(vehicleModel)">
                     <div class="input-group mb-3">
-                        <select name="type" class="custom-select" id="inputGroupSelect01" [(ngModel)]="vehicleType">
+                        <!-- <select name="type" class="custom-select" id="inputGroupSelect01" [(ngModel)]="vehicleModel>
                             <option selected value="2-wheeler">2 Wheeler</option>
                             <option value="3-wheeler">3 Wheeler</option>
                             <option value="4-wheeler">4 Wheeler</option>
                         </select> -->
-                        <input type="text"  name="type" class="custom-select"  id="inputGroupSelect01" [(ngModel)]="vehicleModel" placeholder="Search Vehicle By Model Name">
+                        <input type="text" name="type" class="custom-select" id="inputGroupSelect01"
+                            [(ngModel)]="vehicleModel" placeholder="Search Vehicle By Model Name">
                         <input class="image-button" type="submit" value="Search Vehicle">
                     </div>
                 </form>

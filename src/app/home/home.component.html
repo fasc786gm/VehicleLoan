@@ -24,22 +24,24 @@
                 <h3><b>GET APPROVED &</b></h3>
                 <h3>FIND YOUR PERFECT CAR</h3>
             </div>
-            <div class="content-form"  >
-                <form #regForm="ngForm" (submit)="enquiry(regForm)">
-                    <div class="form-group" >
-                        <input type="text" class="form-control"   id="exampleInputPassword1" placeholder="Name" name="name" [(ngModel)]="enq.name">
-                    </div>
-                    
+            <div class="content-form">
+                <form #regForm="ngForm" (submit)="enquiry()">
                     <div class="form-group">
-                        <input type="email" class="form-control" #email_id="ngModel" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="enq.email"
-                            placeholder="Email">
-                            <div *ngIf="email_id.invalid && (email_id.dirty || email_id.touched)">
-                                <div *ngIf="email_id.errors?.['required']" style="color: red;">Please Enter Your Email ID</div>
-                                <div *ngIf="email_id.errors?.['pattern']" style="color: red;">Wrong Email ID</div>
-                            </div>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name"
+                            name="name" [(ngModel)]="enq.name">
                     </div>
 
-                    
+                    <div class="form-group">
+                        <input type="email" class="form-control" #email_id="ngModel" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" name="email" [(ngModel)]="enq.email" placeholder="Email">
+                        <div *ngIf="email_id.invalid && (email_id.dirty || email_id.touched)">
+                            <div *ngIf="email_id.errors?.['required']" style="color: red;">Please Enter Your Email ID
+                            </div>
+                            <div *ngIf="email_id.errors?.['pattern']" style="color: red;">Wrong Email ID</div>
+                        </div>
+                    </div>
+
+
                     <div class="form-group">
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="Phone" name="phone" [(ngModel)]="enq.phone">
@@ -48,8 +50,7 @@
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="Comments" name="comments" [(ngModel)]="enq.comments">
                     </div>
-                    <a href="mailto:ecourt834@gmail.com" style="margin-left: 50px;" type="submit"
-                        class="btn btn-dark">Lets Get Started</a>
+                    <button style="margin-left: 50px;" type="submit" class="btn btn-dark">Lets Get Started</button>
                 </form>
             </div>
         </div>
@@ -60,10 +61,12 @@
                 <h2><b>YOU CHOOSE THE PAYMENT</b></h2>
             </div>
             <div class="carousel-content-body">
-                <p>Gift yourself that car you've been dreaming of with Car Loan app. Enjoy zero foreclosure charges with a higher loan amount. There's more! Complete the entire process in just 3-steps that isn't any more than 30 minutes.
+                <p>Gift yourself that car you've been dreaming of with Car Loan app. Enjoy zero foreclosure charges with
+                    a higher loan amount. There's more! Complete the entire process in just 3-steps that isn't any more
+                    than 30 minutes.
                     <br>
                     <br>*Terms and Conditions apply
-                   </p>
+                </p>
             </div>
         </div>
     </div>
@@ -82,7 +85,9 @@
                             height="100px" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">1. Apply for Loan</h5>
-                            <p class="card-text">Why not own your dream car today - the one you’ve always been waiting for? Our Car Loan is quick and comes with exclusive features like 100% financing on select vehicles, in a matter of minutes!</p>
+                            <p class="card-text">Why not own your dream car today - the one you’ve always been waiting
+                                for? Our Car Loan is quick and comes with exclusive features like 100% financing on
+                                select vehicles, in a matter of minutes!</p>
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -96,12 +101,12 @@
                             <p class="card-text">
                                 Features:
                             </p>
-                                <ul>
-                               <li> Instant disbursal of loan</li>
-                               <li>  24/7 Online Loan</li>
-                               <li>  Negligible Paper work</li>
-                                </ul>
-                           
+                            <ul>
+                                <li> Instant disbursal of loan</li>
+                                <li> 24/7 Online Loan</li>
+                                <li> Negligible Paper work</li>
+                            </ul>
+
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -112,8 +117,9 @@
                             height="100px" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">3. Receive Approval</h5>
-                            <p class="card-text">At Car Loan, help is at hand 24x7. Besides a cashless and zero paperwork claims experience, you also get free processing fee your car.
-                                </p>
+                            <p class="card-text">At Car Loan, help is at hand 24x7. Besides a cashless and zero
+                                paperwork claims experience, you also get free processing fee your car.
+                            </p>
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -136,7 +142,7 @@
                     <p>Email: VehicleLoan@LTI.com</p>
                     <br>
                     <button class="btn btn-primary btn-lg" (click)="clickMessage()">Contact Us</button>
-                      <div>{{msg}}</div> 
+                    <div>{{msg}}</div>
                 </div>
             </div>
             <div class="col-md-6 loan-adviser-right">

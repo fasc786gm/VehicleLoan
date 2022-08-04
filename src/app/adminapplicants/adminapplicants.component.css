@@ -1,6 +1,9 @@
 .modal {
     color: black;
-    width: 21rem !important;
+}
+
+.modal-content {
+    width: 42rem;
 }
 
 .document-section {

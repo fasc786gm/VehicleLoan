@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxPrintModule } from 'ngx-print';
+// import { NgxPrintModule } from 'ngx-print';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -89,7 +89,7 @@ import { ViewusersComponent } from './viewusers/viewusers.component';
     AppRoutingModule,
     HighchartsChartModule,
     HttpClientModule,
-    NgxPrintModule
+    // NgxPrintModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

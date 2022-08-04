@@ -15,35 +15,37 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  msg:string;
-  clickMessage(){
-    this.msg='Helpline Support:-1800 103 1333  Whatsapp Number:-9311211333';
+  msg: string;
+  clickMessage() {
+    this.msg = 'Helpline Support:-1800 103 1333  Whatsapp Number:-9311211333';
     return this.msg;
   }
 
-  message:String;
-  enq:Enquiry=new Enquiry();
-  
-  constructor(private enquiryService:EnquiryService) { }
+  message: String;
+  enq: Enquiry = new Enquiry();
+
+  constructor(private enquiryService: EnquiryService) { }
 
   ngOnInit(): void {
-    
-    }
 
-    enquiry(regForm:NgForm){
-      console.log(JSON.stringify(this.enq));
-      this.enquiryService.enquiryUser(this.enq).subscribe(msg=>{
-        this.message=msg;
+  }
+
+  enquiry() {
+    console.log("In");
+
+    console.log(JSON.stringify(this.enq));
+    this.enquiryService.enquiryUser(this.enq).subscribe(msg => {
+      this.message = msg;
       //console.log(this.message);
       Swal.fire(
         'Request Submitted Successfully',
         'Our Next Customer Support Will get back as soon as possible',
         'success'
-    )
-    regForm.reset();
-      }
-      );
+      )
+      this.enq = new Enquiry();
     }
-    
+    );
   }
+
+}
 

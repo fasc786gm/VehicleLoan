@@ -2,6 +2,10 @@
     color: black;
 }
 
+.modal-content {
+    width: 42rem;
+}
+
 .document-section {
     padding-top: 50px;
 }
