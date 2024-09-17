@@ -12,7 +12,10 @@ import { CarmakeComponent } from './carmake/carmake.component';
 import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
+import { EmischedulerComponent } from './emischeduler/emischeduler.component';
 import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
+import { EnquirycomponentComponent } from './enquirycomponent/enquirycomponent.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
 import { LoandetailsComponent } from './loandetails/loandetails.component';
 import { LoginComponent } from './login/login.component';
@@ -21,9 +24,12 @@ import { RegisterComponent } from './register/register.component';
 import { UserallapplicationsComponent } from './userallapplications/userallapplications.component';
 import { UserapprovedapplicationsComponent } from './userapprovedapplications/userapprovedapplications.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { UseridComponent } from './userid/userid.component';
 import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
 import { VehiclemakeComponent } from './vehiclemake/vehiclemake.component';
 import { VehiclespecificationComponent } from './vehiclespecification/vehiclespecification.component';
+import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 const routes: Routes = [
     {
@@ -73,6 +79,10 @@ const routes: Routes = [
             {
                 path: 'rejectedApplications',
                 component: UserrejectedapplicationsComponent
+            },
+            {
+                path: 'emiScheduler',
+                component: EmischedulerComponent
             }
         ]
     },
@@ -95,6 +105,16 @@ const routes: Routes = [
             {
                 path: 'rejectedApplications',
                 component: AdminrejectedapplicantsComponent
+            },
+            {
+
+                path:'enquirycomponent',
+                component:EnquirycomponentComponent
+            },
+            {
+                path: 'viewAllUsers',
+                component: ViewusersComponent
+
             }
         ]
     },
@@ -111,6 +131,10 @@ const routes: Routes = [
         component: VehiclemakeComponent
     },
     {
+        path:'vehicleModel',
+        component:VehilclemodelComponent
+    },
+    {
         path: 'personalDetails',
         component: PersonaldetailsComponent
     },
@@ -121,6 +145,14 @@ const routes: Routes = [
     {
         path: "documents",
         component: DocumentsComponent
+    },
+    {
+        path: 'forgotPassword/:userId',
+        component: ForgotpasswordComponent
+    },
+    {
+        path: 'resetPassword',
+        component: UseridComponent
     }
 ];
 

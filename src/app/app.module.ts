@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import { NgxPrintModule } from 'ngx-print';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +36,12 @@ import { AdminrejectedapplicantsComponent } from './adminrejectedapplicants/admi
 import { UserallapplicationsComponent } from './userallapplications/userallapplications.component';
 import { UserapprovedapplicationsComponent } from './userapprovedapplications/userapprovedapplications.component';
 import { UserrejectedapplicationsComponent } from './userrejectedapplications/userrejectedapplications.component';
+import { EmischedulerComponent } from './emischeduler/emischeduler.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { UseridComponent } from './userid/userid.component';
+import { EnquirycomponentComponent } from './enquirycomponent/enquirycomponent.component';
+import { VehilclemodelComponent } from './vehilclemodel/vehilclemodel.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +72,12 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
     UserallapplicationsComponent,
     UserapprovedapplicationsComponent,
     UserrejectedapplicationsComponent,
+    EmischedulerComponent,
+    ForgotpasswordComponent,
+    UseridComponent,
+    EnquirycomponentComponent,
+    VehilclemodelComponent,
+    ViewusersComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +88,8 @@ import { UserrejectedapplicationsComponent } from './userrejectedapplications/us
     MatInputModule,
     AppRoutingModule,
     HighchartsChartModule,
-    HttpClientModule
+    HttpClientModule,
+    // NgxPrintModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

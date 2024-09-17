@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Loan } from '../loan';
 import { LoanService } from '../loan.service';
+import { PersonaldetailsService } from '../personaldetails.service';
+import { Sales } from '../sales';
+import { SalesService } from '../sales.service';
 import { VehicleService } from '../vehicle.service';
 
 @Component({
@@ -25,7 +28,12 @@ export class VehiclespecificationComponent implements OnInit {
 
     loan: Loan = new Loan();
 
-    constructor(private vehicleService: VehicleService, private router: Router, private loanService: LoanService) {
+    user: any;
+    userId: number;
+
+    sales: Sales = new Sales;
+
+    constructor(private vehicleService: VehicleService, private router: Router, private loanService: LoanService, private personalDetailService: PersonaldetailsService, private salesService: SalesService) {
 
     }
 
@@ -71,7 +79,36 @@ export class VehiclespecificationComponent implements OnInit {
             this.loan.emi = this.emi3;
         }
         this.loanService.setLoan(this.loan);
-        this.router.navigateByUrl("/checkEligibility");
+        this.user = JSON.parse(sessionStorage.getItem("user"));
+        this.userId = this.user.userId;
+        this.personalDetailService.getPersonalDetailsByUserId(this.userId).subscribe(data => {
+            if (data != null) {
+                console.log(data);
+
+                let message = window.confirm("Apply for Loan ?");
+                if (message == true) {
+                    console.log(data.applicantId);
+
+                    this.sales.applicantId = data.applicantId;
+                    console.log("Sales: " + this.sales);
+
+                    this.loanService.addLoanDetails(this.loan).subscribe(data => {
+                        console.log('Loan: ' + data);
+                        this.sales.loanId = data.loanId;
+                        this.sales.vehicleId = this.vehicleService.getVehicleData().vehicleId;
+                        console.log(this.sales);
+
+                        this.salesService.addSales(this.sales).subscribe(saleData => {
+                            console.log(saleData);
+                            this.router.navigateByUrl("/home");
+                        })
+                    });
+                }
+
+            } else {
+                this.router.navigateByUrl("/checkEligibility");
+            }
+        })
     }
 
 }

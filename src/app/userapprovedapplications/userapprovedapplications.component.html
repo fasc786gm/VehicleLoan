@@ -15,14 +15,14 @@
             <td><button type="button" (click)="viewPersonalDetails(p.firstName, p.age, p.email, p.mobileNo)"
                     class="btn btn-primary" data-toggle="modal" data-target="#personalDetails">View
                     Details</button></td>
-            <td><button type="button" (click)="viewLoanDetails(p.loanTenure, p.loanAmount, p.rateOfInterest, p.emi)"
+            <td><button type="button" (click)="viewLoanDetails(p.loanAmount, p.loanTenure, p.rateOfInterest, p.emi)"
                     class="btn btn-primary" data-toggle="modal" data-target="#loanDetails">View
                     Details</button></td>
             <td><button type="button" (click)="viewVehicleDetails(p.vehicleMake, p.vehicleModel, p.price)"
                     class="btn btn-primary" data-toggle="modal" data-target="#vehicleDetails">View
                     Details</button></td>
             <td><button type="button"
-                    (click)="viewDocumentDetails(p.aadharUrl, p.panUrl, p.photoUrl, p.sixMonthSalarySlipUrl)"
+                    (click)="viewDocumentDetails(p.aadharUrl, p.panUrl, p.photoUrl, p.sixMonthSalaryUrl)"
                     class="btn btn-primary" data-toggle="modal" data-target="#documentDetails">View
                     Details</button></td>
             <td><span class="badge badge-success">Approved</span></td>
@@ -89,7 +89,7 @@
                     <tbody>
                         <tr>
                             <td>{{loanAmount}}</td>
-                            <td>{{loanTenure}}</td>
+                            <td>{{loanTenure}} yrs</td>
                             <td>{{emi}}</td>
                             <td>{{rateOfInterest}} %</td>
                         </tr>
@@ -174,7 +174,7 @@
                         </tr>
                         <tr>
                             <td>Six Month Salary Slip</td>
-                            <td><a class="btn btn-primary" href="{{photoUrl}}" target="_blank">
+                            <td><a class="btn btn-primary" href="{{salarySlipUrl}}" target="_blank">
                                     View
                                     Document </a></td>
                         </tr>

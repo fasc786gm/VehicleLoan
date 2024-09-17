@@ -57,7 +57,7 @@ export class AddvehicleComponent implements OnInit {
                     //Success
                     console.log(data);
                     alert("Vehicle Added Successfully")
-                    this.router.navigateByUrl("/adminDashboard/addLoan");
+                    this.router.navigateByUrl("/adminDashboard/");
                 }
             });
         })

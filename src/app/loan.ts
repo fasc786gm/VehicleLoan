@@ -1,8 +1,8 @@
 export class Loan {
-    loanId: number;
-    loanAmount: number;
-    loanTenure: number;
-    rateOfInterest: number;
-    emi: number;
-    vehicleId: number;
+   public loanId: number;
+   public loanAmount: number;
+   public  loanTenure: number;
+   public rateOfInterest: number;
+   public emi: number;
+   public vehicleId: number;
 }

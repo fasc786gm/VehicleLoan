@@ -1,0 +1,19 @@
+<h1 style="text-align: center; margin-top: 30px; font-size: 4.3em; margin-bottom: 40px;">
+    Specification of the car
+</h1>
+<div style="margin-left: 350px; width: 100%;">
+
+    <div class="main" style="margin-top: 20px; cursor: pointer;" *ngFor="let v of vehicleModelarr">
+        <div>
+            
+            <img src="{{v.carImageUrl}}" alt="Tucson" class="img_container">
+        </div>
+        <div class="text_container">
+            <h2>{{v.vehicleMake}} {{v.vehicleModel}}</h2>
+            <h3>₹ {{v.price}} onwards</h3>
+            <h3>variant:-{{v.fuelType}}</h3>
+            <h3>Fuel Tank:-{{v.fuelTank}}L</h3>
+            <button type="text" class="submit" (click)="viewDetails(v.vehicleId)">View More Offers</button> 
+        </div>
+    </div>
+</div> 
